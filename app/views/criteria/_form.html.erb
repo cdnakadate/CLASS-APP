@@ -1,0 +1,267 @@
+<%= form_for @criterium, :html => { :class => "form-horizontal criterium" } do |f| %>
+
+    <% if @criterium.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@criterium.errors.count, "error") %> prohibited this criterium from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @criterium.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :school_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :school_name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:school_name]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :evaluator_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :evaluator_name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:evaluator_name]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :evaluated_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :evaluated_name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:evaluated_name]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :subject, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :subject, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:subject]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :sudent_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :sudent_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:sudent_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :employee_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :employee_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:employee_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :eval_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :eval_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:eval_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :vanguard, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :vanguard, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:vanguard]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :class_period, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :class_period, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:class_period]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :grade, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :grade, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:grade]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :student_employee, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :student_employee, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:student_employee]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :pl1, :class => 'control-label' %> <h5>Develops student leraning goals.</h5>
+    <div class="controls">
+      <%= f.text_field :pl1, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:pl1]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :pl2, :class => 'control-label' %> <h5>lolzzzz.</h5>
+    <div class="controls">
+      <%= f.text_field :pl2, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:pl2]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :pl3, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pl3, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:pl3]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :i1, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :i1, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:i1]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :i2, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :i2, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:i2]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :i3, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :i3, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:i3]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :i4, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :i4, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:i4]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :i5, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :i5, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:i5]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :i6, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :i6, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:i6]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :i7, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :i7, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:i7]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :i8, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :i8, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:i8]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :i9, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :i9, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:i9]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :i10, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :i10, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:i10]) %>
+  </div>
+
+ <div class="control-group">
+ <%= f.label :pr1, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pr1, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:pr1]) %>
+  </div>
+
+ <div class="control-group">
+ <%= f.label :pr2, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pr2, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:pr2]) %>
+  </div>
+ <div class="control-group">
+ <%= f.label :pr3, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pr3, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:pr3]) %>
+  </div>
+ <div class="control-group">
+ <%= f.label :pr4, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pr4, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:pr4]) %>
+  </div>
+ <div class="control-group">
+ <%= f.label :pr5, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pr5, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:pr5]) %>
+  </div>
+<div class="control-group">
+ <%= f.label :pr6, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pr6, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:pr6]) %>
+  </div>
+
+<div class="control-group">
+ <%= f.label :pr7, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pr7, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:pr7]) %>
+  </div>
+
+<div class="control-group">
+ <%= f.label :pr8, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pr8, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:pr8]) %>
+  </div>
+
+<div class="control-group">
+ <%= f.label :pr9, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pr9, :class => 'form-control' %>
+    </div>
+    <%= error_span(@criterium[:pr9]) %>
+  </div>
+
+<div class="control-group">
+  <%= f.label :note, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :note, :class => 'form-control' %>
+    </div>
+  <%= error_span(@criterium[:note]) %>
+  </div>
+
+<%= f.submit nil, :class => 'btn btn-success' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            criteria_path, :class => 'btn btn-default' %>
+
+<% end %>

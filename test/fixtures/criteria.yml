@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  school_name: MyString
+  evaluator_name: MyString
+  evaluated_name: MyString
+  subject: MyString
+  sudent_id: MyString
+  employee_id: MyString
+  eval_id: MyString
+  vanguard: MyString
+  class_period: 9.99
+  grade: 9.99
+  student_employee: false
+  pl1: MyText
+  pl2: MyText
+  pl3: MyText
+  i1: MyText
+  i2: MyText
+  i3: MyText
+  i4: MyText
+  i5: MyText
+  i6: MyText
+  i7: MyText
+  i8: MyText
+  i9: MyText
+  i10: MyText
+
+two:
+  school_name: MyString
+  evaluator_name: MyString
+  evaluated_name: MyString
+  subject: MyString
+  sudent_id: MyString
+  employee_id: MyString
+  eval_id: MyString
+  vanguard: MyString
+  class_period: 9.99
+  grade: 9.99
+  student_employee: false
+  pl1: MyText
+  pl2: MyText
+  pl3: MyText
+  i1: MyText
+  i2: MyText
+  i3: MyText
+  i4: MyText
+  i5: MyText
+  i6: MyText
+  i7: MyText
+  i8: MyText
+  i9: MyText
+  i10: MyText

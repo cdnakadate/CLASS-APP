@@ -1,0 +1,85 @@
+<%- model_class = Criterium -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:school_name) %>:</strong></dt>
+  <dd><%= @criterium.school_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:evaluator_name) %>:</strong></dt>
+  <dd><%= @criterium.evaluator_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:evaluated_name) %>:</strong></dt>
+  <dd><%= @criterium.evaluated_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:subject) %>:</strong></dt>
+  <dd><%= @criterium.subject %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sudent_id) %>:</strong></dt>
+  <dd><%= @criterium.sudent_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:employee_id) %>:</strong></dt>
+  <dd><%= @criterium.employee_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:eval_id) %>:</strong></dt>
+  <dd><%= @criterium.eval_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:vanguard) %>:</strong></dt>
+  <dd><%= @criterium.vanguard %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:class_period) %>:</strong></dt>
+  <dd><%= @criterium.class_period %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:grade) %>:</strong></dt>
+  <dd><%= @criterium.grade %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:student_employee) %>:</strong></dt>
+  <dd><%= @criterium.student_employee %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pl1) %>:</strong></dt>
+  <dd><%= @criterium.pl1 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pl2) %>:</strong></dt>
+  <dd><%= @criterium.pl2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pl3) %>:</strong></dt>
+  <dd><%= @criterium.pl3 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:i1) %>:</strong></dt>
+  <dd><%= @criterium.i1 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:i2) %>:</strong></dt>
+  <dd><%= @criterium.i2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:i3) %>:</strong></dt>
+  <dd><%= @criterium.i3 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:i4) %>:</strong></dt>
+  <dd><%= @criterium.i4 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:i5) %>:</strong></dt>
+  <dd><%= @criterium.i5 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:i6) %>:</strong></dt>
+  <dd><%= @criterium.i6 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:i7) %>:</strong></dt>
+  <dd><%= @criterium.i7 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:i8) %>:</strong></dt>
+  <dd><%= @criterium.i8 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:i9) %>:</strong></dt>
+  <dd><%= @criterium.i9 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:i10) %>:</strong></dt>
+  <dd><%= @criterium.i10 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pr1) %>:</strong></dt>
+  <dd><%= @criterium.pr1 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pr2) %>:</strong></dt>
+  <dd><%= @criterium.pr2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pr3) %>:</strong></dt>
+  <dd><%= @criterium.pr3 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pr4) %>:</strong></dt>
+  <dd><%= @criterium.pr4 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pr5) %>:</strong></dt>
+  <dd><%= @criterium.pr5 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pr6) %>:</strong></dt>
+  <dd><%= @criterium.pr6 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pr7) %>:</strong></dt>
+  <dd><%= @criterium.pr7 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pr8) %>:</strong></dt>
+  <dd><%= @criterium.pr8 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pr9) %>:</strong></dt>
+  <dd><%= @criterium.pr9 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:note) %>:</strong></dt>
+  <dd><%= @criterium.note %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              criteria_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_criterium_path(@criterium), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              criterium_path(@criterium),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
