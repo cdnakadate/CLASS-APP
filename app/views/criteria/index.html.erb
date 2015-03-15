@@ -1,58 +1,53 @@
-<%- model_class = Criterium -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => "Evaluations".pluralize.titleize %></h1>
+<div class="row">
+  <div class="col-md-10 col-md-push-1">
+  <%- model_class = Criterium -%>
+  <div class="page-header">
+    <h1><%=t '.title', :default => "Evaluations".pluralize.titleize %></h1>
+  </div>
 </div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:school_name) %></th>
-      <th><%= model_class.human_attribute_name(:evaluator_name) %></th>
-      <th><%= model_class.human_attribute_name(:evaluated_name) %></th>
-      <th><%= model_class.human_attribute_name(:subject) %></th>
-      <th><%= model_class.human_attribute_name(:sudent_id) %></th>
-      <th><%= model_class.human_attribute_name(:employee_id) %></th>
-      <th><%= model_class.human_attribute_name(:eval_id) %></th>
-      <th><%= model_class.human_attribute_name(:vanguard) %></th>
-      <th><%= model_class.human_attribute_name(:class_period) %></th>
-      <th><%= model_class.human_attribute_name(:grade) %></th>
-      <th><%= model_class.human_attribute_name(:student_employee) %></th>
-     
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @criteria.each do |criterium| %>
+ <div class="col-md-10 col-md-push-1">
+  <div class="table_container">
+  <table class="table table-striped">
+    <thead>
       <tr>
-        <td><%= link_to criterium.id, criterium_path(criterium) %></td>
-        <td><%= criterium.school_name %></td>
-        <td><%= criterium.evaluator_name %></td>
-        <td><%= criterium.evaluated_name %></td>
-        <td><%= criterium.subject %></td>
-        <td><%= criterium.sudent_id %></td>
-        <td><%= criterium.employee_id %></td>
-        <td><%= criterium.eval_id %></td>
-        <td><%= criterium.vanguard %></td>
-        <td><%= criterium.class_period %></td>
-        <td><%= criterium.grade %></td>
-        <td><%= criterium.student_employee %></td>
-       
-        <td><%=l criterium.created_at %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-    edit_criterium_path(criterium), :class => 'btn btn-success btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      criterium_path(criterium),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <th><%= model_class.human_attribute_name(:id) %></th>
+        <th><%= model_class.human_attribute_name(:school_name) %></th>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_criterium_path,
-            :class => 'btn btn-primary' %>
+        <th><%= model_class.human_attribute_name(:subject) %></th>
+        <th><%= model_class.human_attribute_name(:eval_id) %></th>
+       
+
+        <th><%= model_class.human_attribute_name(:created_at) %></th>
+        <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @criteria.each do |criterium| %>
+        <tr>
+          <td><%= link_to criterium.id, criterium_path(criterium) %></td>
+          <td><%= criterium.school_name %></td>
+       
+          <td><%= criterium.subject %></td>
+       
+          <td><%= criterium.eval_id %></td>
+
+          <td><%=l criterium.created_at %></td>
+          <td>
+            <%= link_to t('.edit', :default => t("helpers.links.edit")),
+      edit_criterium_path(criterium), :class => 'btn btn-success btn-xs' %>
+            <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                        criterium_path(criterium),
+                        :method => :delete,
+                        :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                        :class => 'btn btn-xs btn-danger' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+  <%= link_to t('.new', :default => t("helpers.links.new")),
+              new_criterium_path,
+              :class => 'btn btn-primary' %>
+  </div>
+</div>
