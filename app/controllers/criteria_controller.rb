@@ -1,4 +1,5 @@
 class CriteriaController < ApplicationController
+  http_basic_authenticate_with name: "frodo", password: "ring", except: :index
   before_action :set_criterium, only: [:show, :edit, :update, :destroy]
 
   # GET /criteria
