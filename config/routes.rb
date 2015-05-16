@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
  
-get 'login' => 'user_sessions#new', :as => :login
-post 'logout' => 'user_sessions#destroy', :as => :logout
-  get 'user_sessions/new'
-
-  get 'user_sessions/create'
-
-  get 'user_sessions/destroy'
-
+ 
+# get "logout" => "user_sessions#destroy", :as => :logout
+get "login" => "user_sessions#new", :as => :login
+get "signup" => "users#new", :as => "signup"
+  post 'logout' => 'user_sessions#destroy', :as => :logout
+  
+  resource :user_sessions 
   resources :users
+ 
 
   get 'static_pages/about'
 
