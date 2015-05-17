@@ -1,5 +1,5 @@
 class CriteriaController < ApplicationController
-  http_basic_authenticate_with name: "frodo", password: "ring", except: :index
+
   before_action :set_criterium, only: [:show, :edit, :update, :destroy]
 
   # GET /criteria
@@ -70,6 +70,6 @@ class CriteriaController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def criterium_params
-      params.require(:criterium).permit(:school_name, :evaluator_name, :evaluated_name, :subject, :sudent_id, :employee_id, :eval_id, :vanguard, :class_period, :grade, :student_employee, :notes, :pl1, :pl2, :pl3, :pr1, :pr2, :pr3, :pr4, :pr5, :pr6, :pr7, :pr8, :pr9, :i1, :i2, :i3, :i4, :i5, :i6, :i7, :i8, :i9, :i10)
+      params.require(:criterium).permit(:school_name, :evaluator_name, :evaluated_name, :subject, :sudent_id, :employee_id, :eval_id, :vanguard, :class_period, :grade, :student_employee, :notes, :pl1, :pl2, :pl3, :pr1, :pr2, :pr3, :pr4, :pr5, :pr6, :pr7, :pr8, :pr9, :i1, :i2, :i3, :i4, :i5, :i6, :i7, :i8, :i9, :i10, :file_upload)
     end
 end

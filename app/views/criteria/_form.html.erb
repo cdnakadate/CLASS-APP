@@ -259,7 +259,9 @@
     </div>
   <%= error_span(@criterium[:note]) %>
   </div>
-
+<br>
+<%= f.file_field :file_upload %>
+<br>
 <%= f.submit nil, :class => 'btn btn-success' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
             criteria_path, :class => 'btn btn-default' %>

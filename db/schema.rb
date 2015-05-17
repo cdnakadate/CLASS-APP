@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150419164848) do
+ActiveRecord::Schema.define(version: 20150517172121) do
 
   create_table "criteria", force: true do |t|
     t.string   "school_name"
@@ -50,6 +50,10 @@ ActiveRecord::Schema.define(version: 20150419164848) do
     t.text     "pr8"
     t.text     "pr9"
     t.text     "note"
+    t.string   "file_upload_file_name"
+    t.string   "file_upload_content_type"
+    t.integer  "file_upload_file_size"
+    t.datetime "file_upload_updated_at"
   end
 
   create_table "users", force: true do |t|

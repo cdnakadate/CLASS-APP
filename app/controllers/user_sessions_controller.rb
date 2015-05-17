@@ -8,7 +8,7 @@ class UserSessionsController < ApplicationController
     if user
       redirect_to criteria_url, :notice => "You are Logged in"
     else
-      redirect_to :login, :alert => "Invalid Username or Password"
+      redirect_to :login, :alert => "Invalid Username or Password!"
      
     end
   end
