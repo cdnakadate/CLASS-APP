@@ -72,7 +72,12 @@
   <dd><%= @criterium.pr9 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:note) %>:</strong></dt>
   <dd><%= @criterium.note %></dd>
+  <dt><strong>Attached File:</strong></dt>
+   <dd> <%=image_tag( @criterium.file_upload) %> </dt>
+
 </dl>
+
+ 
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               criteria_path, :class => 'btn btn-default'  %>
